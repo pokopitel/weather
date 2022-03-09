@@ -31,7 +31,7 @@ export const Bar = () => {
   const graphFillColor = theme.colors.red[500];
 
   return (
-    <Stack w="25%" spacing={6}>
+    <Stack w="25%" minW={250} spacing={6} display={["none", "none", "block"]}>
       <BarCard title="Rain">
         <HStack justifyContent="space-between">
           <Text size="sm">New York City, NY</Text>

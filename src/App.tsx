@@ -10,15 +10,17 @@ const App = () => {
   return (
     <ChakraProvider theme={theme}>
       <Stack
-        p={6}
+        p={[4, 4, 6]}
         gap={8}
         overflow="hidden"
         maxWidth="100vw"
         maxHeight="100vh"
         flexDirection="row"
+        minW={300}
       >
-        <VStack w="75%" spacing={8}>
+        <VStack w={["100%", "100%", "70%", "75%"]} spacing={8}>
           <Header />
+
           <Main />
         </VStack>
 
