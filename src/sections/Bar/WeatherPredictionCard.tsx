@@ -20,7 +20,7 @@ export const WeatherPredictionCard = ({
       <Icon as={getIcon(forecast)} w={10} h={10} color="orange.500" />
 
       <VStack alignItems="start">
-        <Text size="smsb">{forecast[0].toUpperCase() + forecast.slice(1)}</Text>
+        <Text size="smSb">{forecast[0].toUpperCase() + forecast.slice(1)}</Text>
 
         <Text size="xsb" opacity={0.5}>
           {date}
@@ -28,7 +28,7 @@ export const WeatherPredictionCard = ({
       </VStack>
     </HStack>
 
-    <Text size="mdsb" color="orange.500">
+    <Text size="mdSb" color="orange.500">
       {degrees}
     </Text>
   </HStack>

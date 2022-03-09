@@ -1,12 +1,12 @@
 import { HStack, Stack, Text, useTheme } from "@chakra-ui/react";
 
-import { Card } from "../../components/Card";
+import { AreaChart, Area, ResponsiveContainer } from "recharts";
+
+import { BarCard } from "./BarCard";
 import { Slider } from "../../components/Slider";
 import { WeatherPredictionCard } from "./WeatherPredictionCard";
 
 import { WeatherType } from "../../types";
-
-import { AreaChart, Area, ResponsiveContainer } from "recharts";
 
 const weatherPredictions: {
   forecast: WeatherType;
@@ -24,9 +24,6 @@ const weatherPredictions: {
 
 const graphData = [33, 33, 33, 45, 20, 30, 37];
 
-const headerCardHeight = 32;
-const otherLastCardContentHeight = 565 - headerCardHeight;
-
 export const Bar = () => {
   const theme = useTheme();
 
@@ -35,7 +32,7 @@ export const Bar = () => {
 
   return (
     <Stack w="25%" spacing={6}>
-      <Card title="Rain">
+      <BarCard title="Rain">
         <HStack justifyContent="space-between">
           <Text size="sm">New York City, NY</Text>
 
@@ -43,13 +40,13 @@ export const Bar = () => {
             16°C
           </Text>
         </HStack>
-      </Card>
+      </BarCard>
 
-      <Card title="Day-slider">
+      <BarCard title="Day-slider">
         <Slider />
-      </Card>
+      </BarCard>
 
-      <Card title="Temperature for last month">
+      <BarCard title="Temperature for last month">
         <ResponsiveContainer width="100%" height={200}>
           <AreaChart
             height={200}
@@ -70,11 +67,11 @@ export const Bar = () => {
             />
           </AreaChart>
         </ResponsiveContainer>
-      </Card>
+      </BarCard>
 
-      <Card
+      <BarCard
         title="Weather Prediction"
-        childContainerHeight={`calc(100vh - ${otherLastCardContentHeight}px`}
+        childContainerHeight="calc(100vh - 533px"
         hasScroll
       >
         {weatherPredictions.map((item) => (
@@ -85,7 +82,7 @@ export const Bar = () => {
             date={item.date}
           />
         ))}
-      </Card>
+      </BarCard>
     </Stack>
   );
 };

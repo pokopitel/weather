@@ -9,17 +9,16 @@ type SelectProps = {
 export const Select = ({ options }: SelectProps) => {
   const theme = useTheme();
 
-  const selectedOptionBg = theme.colors.purple[200];
-  const notSelectedOptionBg = theme.colors.white;
-  const optionFontColor = theme.colors.black;
-  const hoverOptionBg = theme.colors.purple[50];
-  const activeOptionBg = theme.colors.purple[100];
-  const placeHolderColor = theme.colors.white;
+  const purple = theme.colors.purple[200];
+  const black = theme.colors.black;
+  const purpleLight = theme.colors.purple[50];
+  const heather = theme.colors.purple[100];
+  const white = theme.colors.white;
 
   const customStyles: StylesConfig = {
     control: (provided) => ({
       ...provided,
-      background: selectedOptionBg,
+      background: purple,
       textAlign: "center",
       height: 46,
       border: "none",
@@ -32,29 +31,29 @@ export const Select = ({ options }: SelectProps) => {
     }),
     menuList: (provided) => ({
       ...provided,
-      color: optionFontColor,
+      color: black,
       padding: 0,
     }),
     singleValue: (provided) => ({
       ...provided,
-      color: notSelectedOptionBg,
+      color: white,
       fontWeight: 600,
     }),
     option: (provided, state) => ({
       ...provided,
       textAlign: "center",
-      background: state.isSelected ? selectedOptionBg : notSelectedOptionBg,
+      background: state.isSelected ? purple : white,
       "&:hover": {
-        background: hoverOptionBg,
+        background: purpleLight,
       },
       "&:active": {
-        background: activeOptionBg,
+        background: heather,
       },
     }),
     placeholder: (provided) => ({
       ...provided,
       fontWeight: 600,
-      color: placeHolderColor,
+      color: white,
     }),
   };
 

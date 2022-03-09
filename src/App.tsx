@@ -1,7 +1,9 @@
-import { ChakraProvider, HStack, Stack, VStack } from "@chakra-ui/react";
+import { ChakraProvider, Stack, VStack } from "@chakra-ui/react";
+
 import { Bar } from "./sections/Bar/Bar";
 import { Header } from "./sections/Header";
-import { Main } from "./sections/Main";
+import { Main } from "./sections/Main/Main";
+
 import { theme } from "./theme";
 
 const App = () => {

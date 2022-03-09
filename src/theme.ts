@@ -56,12 +56,34 @@ export const theme = extendTheme({
         sm: {
           fontSize: "0.875rem",
         },
-        mdsb: {
+        mdSb: {
           fontSize: "1rem",
           fontWeight: 600,
         },
-        smsb: {
+        smSb: {
           fontSize: "0.875rem",
+          fontWeight: 600,
+        },
+
+        mdSbBlue: {
+          fontSize: "1rem",
+          p: "0px 8px",
+          borderRadius: 15,
+          bg: "blue.200",
+          fontWeight: 600,
+        },
+        smSbBlue: {
+          fontSize: "0.875em",
+          fontWeight: 600,
+          p: "0px 8px",
+          borderRadius: 15,
+          bg: "blue.200",
+        },
+        xsSbBlue: {
+          fontSize: "0.75rem",
+          p: "0px 8px",
+          borderRadius: 15,
+          bg: "blue.200",
           fontWeight: 600,
         },
       },
